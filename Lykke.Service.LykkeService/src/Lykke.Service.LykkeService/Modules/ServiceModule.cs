@@ -47,6 +47,8 @@ namespace Lykke.Service.LykkeService.Modules
             builder.RegisterType<ShutdownManager>()
                 .As<IShutdownManager>();
 
+            builder.RegisterType<SettingsService>()
+                .As<ISettingsService>();
             // TODO: Add your dependencies here
 
             builder.Populate(_services);

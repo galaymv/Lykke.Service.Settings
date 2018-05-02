@@ -7,9 +7,9 @@ using Common.Log;
 using Lykke.Common.ApiLibrary.Middleware;
 using Lykke.Common.ApiLibrary.Swagger;
 using Lykke.Logs;
-using Lykke.Service.LykkeService.Settings;
-using Lykke.Service.LykkeService.Modules;
 using Lykke.Service.Settings.Core.Services;
+using Lykke.Service.Settings.Modules;
+using Lykke.Service.Settings.Settings;
 using Lykke.SettingsReader;
 using Lykke.SlackNotification.AzureQueue;
 using Microsoft.AspNetCore.Builder;
@@ -57,7 +57,7 @@ namespace Lykke.Service.LykkeService
 
                 Log = CreateLogWithSlack(services, appSettings);
 
-                builder.RegisterModule(new ServiceModule(appSettings.Nested(x => x.LykkeServiceService), Log));
+                builder.RegisterModule(new ServiceModule(appSettings.Nested(x => x.SettingsService), Log));
                 builder.Populate(services);
                 ApplicationContainer = builder.Build();
 
@@ -171,7 +171,7 @@ namespace Lykke.Service.LykkeService
 
             aggregateLogger.AddLog(consoleLogger);
 
-            var dbLogConnectionStringManager = settings.Nested(x => x.LykkeServiceService.Db.LogsConnString);
+            var dbLogConnectionStringManager = settings.Nested(x => x.Db.LogsConnString);
             var dbLogConnectionString = dbLogConnectionStringManager.CurrentValue;
 
             if (string.IsNullOrEmpty(dbLogConnectionString))

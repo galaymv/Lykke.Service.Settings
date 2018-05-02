@@ -1,13 +1,14 @@
 ﻿using JetBrains.Annotations;
-using Lykke.Service.LykkeService.Settings.ServiceSettings;
-using Lykke.Service.LykkeService.Settings.SlackNotifications;
+using Lykke.Service.Settings.Settings.ServiceSettings;
+using Lykke.Service.Settings.Settings.SlackNotifications;
 
-namespace Lykke.Service.LykkeService.Settings
+namespace Lykke.Service.Settings.Settings
 {
     [UsedImplicitly(ImplicitUseTargetFlags.WithMembers)]
     public class AppSettings
     {
-        public LykkeServiceSettings LykkeServiceService { get; set; }
+        public SettingsServiceSettings SettingsService { get; set; }
+        public DbSettings Db { get; set; }
         public SlackNotificationsSettings SlackNotifications { get; set; }
     }
 }

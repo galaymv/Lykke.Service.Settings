@@ -21,7 +21,7 @@ namespace Lykke.Service.Settings.Client
                 .SingleInstance();
         }
 
-        public static void RegisterLykkeServiceClient(this ContainerBuilder builder, LykkeServiceServiceClientSettings settings, ILog log)
+        public static void RegisterLykkeServiceClient(this ContainerBuilder builder, SettingsServiceClientSettings settings, ILog log)
         {
             builder.RegisterLykkeServiceClient(settings?.ServiceUrl, log);
         }

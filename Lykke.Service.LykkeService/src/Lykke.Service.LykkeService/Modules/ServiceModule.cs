@@ -1,23 +1,23 @@
 ﻿using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Common.Log;
-using Lykke.Service.LykkeService.Settings.ServiceSettings;
 using Lykke.Service.Settings.Core.Services;
 using Lykke.Service.Settings.Services;
 using Lykke.Service.Settings.Services.Services;
+using Lykke.Service.Settings.Settings.ServiceSettings;
 using Lykke.SettingsReader;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Lykke.Service.LykkeService.Modules
+namespace Lykke.Service.Settings.Modules
 {
     public class ServiceModule : Module
     {
-        private readonly IReloadingManager<LykkeServiceSettings> _settings;
+        private readonly IReloadingManager<SettingsServiceSettings> _settings;
         private readonly ILog _log;
         // NOTE: you can remove it if you don't need to use IServiceCollection extensions to register service specific dependencies
         private readonly IServiceCollection _services;
 
-        public ServiceModule(IReloadingManager<LykkeServiceSettings> settings, ILog log)
+        public ServiceModule(IReloadingManager<SettingsServiceSettings> settings, ILog log)
         {
             _settings = settings;
             _log = log;

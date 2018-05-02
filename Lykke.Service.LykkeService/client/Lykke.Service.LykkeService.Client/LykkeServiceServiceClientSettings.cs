@@ -1,6 +1,6 @@
 ﻿namespace Lykke.Service.Settings.Client 
 {
-    public class LykkeServiceServiceClientSettings 
+    public class SettingsServiceClientSettings
     {
         public string ServiceUrl {get; set;}
     }

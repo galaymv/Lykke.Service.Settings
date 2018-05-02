@@ -1,7 +1,7 @@
 ﻿using JetBrains.Annotations;
 using Lykke.SettingsReader.Attributes;
 
-namespace Lykke.Service.LykkeService.Settings.SlackNotifications
+namespace Lykke.Service.Settings.Settings.SlackNotifications
 {
     [UsedImplicitly(ImplicitUseTargetFlags.WithMembers)]
     public class AzureQueuePublicationSettings

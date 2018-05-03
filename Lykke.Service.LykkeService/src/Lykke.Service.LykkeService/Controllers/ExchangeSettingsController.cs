@@ -9,6 +9,7 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 namespace Lykke.Service.Settings.Controllers
 {
     [Route("api/ExchangeSettings")]
+    [Produces("application/json")]
     public class ExchangeSettingsController : Controller
     {
         private readonly ISettingsService _settingsService;
@@ -21,8 +22,7 @@ namespace Lykke.Service.Settings.Controllers
 
         [HttpGet]
         [SwaggerOperation("ExchangeSettings")]
-        [ProducesResponseType(typeof(IsAliveResponse), (int)HttpStatusCode.OK)]
-        [ProducesResponseType(typeof(ErrorResponse), (int)HttpStatusCode.InternalServerError)]
+        [ProducesResponseType(typeof(ExchangeSettingsResponse), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> Get(string clientId)
         {
             var settings = new ExchangeSettingsResponse(await _settingsService.GetExchangeSettingsAsync(clientId));

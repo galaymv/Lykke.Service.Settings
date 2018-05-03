@@ -3,11 +3,11 @@ using Common.Log;
 
 namespace Lykke.Service.Settings.Client
 {
-    public class LykkeServiceClient : ILykkeServiceClient, IDisposable
+    public class SettingsServiceClient : ISettingsServiceClient, IDisposable
     {
         private readonly ILog _log;
 
-        public LykkeServiceClient(string serviceUrl, ILog log)
+        public SettingsServiceClient(string serviceUrl, ILog log)
         {
             _log = log;
         }

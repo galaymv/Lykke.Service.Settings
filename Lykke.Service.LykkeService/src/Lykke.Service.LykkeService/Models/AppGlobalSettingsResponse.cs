@@ -1,5 +1,4 @@
 ﻿using System;
-using Lykke.Service.LykkeService.AzureRepositories.Entities.AppGlobal;
 using Lykke.Service.Settings.Core.Domain;
 
 namespace Lykke.Service.Settings.Models

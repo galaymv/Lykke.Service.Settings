@@ -7,6 +7,7 @@ using Common.Log;
 using Lykke.Common.ApiLibrary.Middleware;
 using Lykke.Common.ApiLibrary.Swagger;
 using Lykke.Logs;
+using Lykke.Service.LykkeService;
 using Lykke.Service.Settings.Core.Services;
 using Lykke.Service.Settings.Modules;
 using Lykke.Service.Settings.Settings;
@@ -17,7 +18,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Lykke.Service.LykkeService
+namespace Lykke.Service.Settings
 {
     public class Startup
     {

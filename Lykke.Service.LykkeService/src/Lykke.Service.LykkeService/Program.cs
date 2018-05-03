@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.PlatformAbstractions;
 
-namespace Lykke.Service.LykkeService
+namespace Lykke.Service.Settings
 {
     internal sealed class Program
     {

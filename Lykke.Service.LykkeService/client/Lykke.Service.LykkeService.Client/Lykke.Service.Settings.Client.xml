@@ -4,5 +4,424 @@
         <name>Lykke.Service.Settings.Client</name>
     </assembly>
     <members>
+        <member name="T:Lykke.Service.Settings.Client.ISettingsServiceClient">
+            <summary>
+            ISettingsServiceClient
+            </summary>
+        </member>
+        <member name="T:Lykke.Service.LykkeService.Client.AutorestClient.ILykkeServiceAPI">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.ILykkeServiceAPI.BaseUri">
+            <summary>
+            The base URI of the service.
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.ILykkeServiceAPI.SerializationSettings">
+            <summary>
+            Gets or sets json serialization settings.
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.ILykkeServiceAPI.DeserializationSettings">
+            <summary>
+            Gets or sets json deserialization settings.
+            </summary>
+        </member>
+        <member name="M:Lykke.Service.LykkeService.Client.AutorestClient.ILykkeServiceAPI.AppSettingsWithHttpMessagesAsync(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Lykke.Service.LykkeService.Client.AutorestClient.ILykkeServiceAPI.ExchangeSettingsWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <param name='clientId'>
+            </param>
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Lykke.Service.LykkeService.Client.AutorestClient.ILykkeServiceAPI.IsAliveWithHttpMessagesAsync(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <param name='customHeaders'>
+            The headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.LykkeServiceAPI.BaseUri">
+            <summary>
+            The base URI of the service.
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.LykkeServiceAPI.SerializationSettings">
+            <summary>
+            Gets or sets json serialization settings.
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.LykkeServiceAPI.DeserializationSettings">
+            <summary>
+            Gets or sets json deserialization settings.
+            </summary>
+        </member>
+        <member name="M:Lykke.Service.LykkeService.Client.AutorestClient.LykkeServiceAPI.#ctor(System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the LykkeServiceAPI class.
+            </summary>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+        </member>
+        <member name="M:Lykke.Service.LykkeService.Client.AutorestClient.LykkeServiceAPI.#ctor(System.Net.Http.HttpClientHandler,System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the LykkeServiceAPI class.
+            </summary>
+            <param name='rootHandler'>
+            Optional. The http client handler used to handle http transport.
+            </param>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+        </member>
+        <member name="M:Lykke.Service.LykkeService.Client.AutorestClient.LykkeServiceAPI.#ctor(System.Uri,System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the LykkeServiceAPI class.
+            </summary>
+            <param name='baseUri'>
+            Optional. The base URI of the service.
+            </param>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Lykke.Service.LykkeService.Client.AutorestClient.LykkeServiceAPI.#ctor(System.Uri,System.Net.Http.HttpClientHandler,System.Net.Http.DelegatingHandler[])">
+            <summary>
+            Initializes a new instance of the LykkeServiceAPI class.
+            </summary>
+            <param name='baseUri'>
+            Optional. The base URI of the service.
+            </param>
+            <param name='rootHandler'>
+            Optional. The http client handler used to handle http transport.
+            </param>
+            <param name='handlers'>
+            Optional. The delegating handlers to add to the http client pipeline.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Thrown when a required parameter is null
+            </exception>
+        </member>
+        <member name="M:Lykke.Service.LykkeService.Client.AutorestClient.LykkeServiceAPI.Initialize">
+            <summary>
+            Initializes client properties.
+            </summary>
+        </member>
+        <member name="M:Lykke.Service.LykkeService.Client.AutorestClient.LykkeServiceAPI.AppSettingsWithHttpMessagesAsync(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.HttpOperationException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Lykke.Service.LykkeService.Client.AutorestClient.LykkeServiceAPI.ExchangeSettingsWithHttpMessagesAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <param name='clientId'>
+            </param>
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.HttpOperationException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="M:Lykke.Service.LykkeService.Client.AutorestClient.LykkeServiceAPI.IsAliveWithHttpMessagesAsync(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}},System.Threading.CancellationToken)">
+            <param name='customHeaders'>
+            Headers that will be added to request.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+            <exception cref="T:Microsoft.Rest.HttpOperationException">
+            Thrown when the operation returned an invalid status code
+            </exception>
+            <exception cref="T:Microsoft.Rest.SerializationException">
+            Thrown when unable to deserialize the response
+            </exception>
+            <return>
+            A response object containing the response body and response headers.
+            </return>
+        </member>
+        <member name="T:Lykke.Service.LykkeService.Client.AutorestClient.LykkeServiceAPIExtensions">
+            <summary>
+            Extension methods for LykkeServiceAPI.
+            </summary>
+        </member>
+        <member name="M:Lykke.Service.LykkeService.Client.AutorestClient.LykkeServiceAPIExtensions.AppSettings(Lykke.Service.LykkeService.Client.AutorestClient.ILykkeServiceAPI)">
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+        </member>
+        <member name="M:Lykke.Service.LykkeService.Client.AutorestClient.LykkeServiceAPIExtensions.AppSettingsAsync(Lykke.Service.LykkeService.Client.AutorestClient.ILykkeServiceAPI,System.Threading.CancellationToken)">
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Lykke.Service.LykkeService.Client.AutorestClient.LykkeServiceAPIExtensions.ExchangeSettings(Lykke.Service.LykkeService.Client.AutorestClient.ILykkeServiceAPI,System.String)">
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='clientId'>
+            </param>
+        </member>
+        <member name="M:Lykke.Service.LykkeService.Client.AutorestClient.LykkeServiceAPIExtensions.ExchangeSettingsAsync(Lykke.Service.LykkeService.Client.AutorestClient.ILykkeServiceAPI,System.String,System.Threading.CancellationToken)">
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='clientId'>
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Lykke.Service.LykkeService.Client.AutorestClient.LykkeServiceAPIExtensions.IsAlive(Lykke.Service.LykkeService.Client.AutorestClient.ILykkeServiceAPI)">
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+        </member>
+        <member name="M:Lykke.Service.LykkeService.Client.AutorestClient.LykkeServiceAPIExtensions.IsAliveAsync(Lykke.Service.LykkeService.Client.AutorestClient.ILykkeServiceAPI,System.Threading.CancellationToken)">
+            <param name='operations'>
+            The operations group for this extension method.
+            </param>
+            <param name='cancellationToken'>
+            The cancellation token.
+            </param>
+        </member>
+        <member name="M:Lykke.Service.LykkeService.Client.AutorestClient.Models.AppGlobalSettingsResponse.#ctor">
+            <summary>
+            Initializes a new instance of the AppGlobalSettingsResponse class.
+            </summary>
+        </member>
+        <member name="M:Lykke.Service.LykkeService.Client.AutorestClient.Models.AppGlobalSettingsResponse.#ctor(System.Boolean,System.String,System.Nullable{System.Boolean},System.String,System.String,System.Nullable{System.Boolean},System.Nullable{System.Double},System.Nullable{System.Double},System.Nullable{System.Boolean},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Double},System.Collections.Generic.IList{System.String},System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
+            <summary>
+            Initializes a new instance of the AppGlobalSettingsResponse class.
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.Models.AppGlobalSettingsResponse.DepositUrl">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.Models.AppGlobalSettingsResponse.DebugMode">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.Models.AppGlobalSettingsResponse.DefaultIosAssetGroup">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.Models.AppGlobalSettingsResponse.DefaultAssetGroupForOther">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.Models.AppGlobalSettingsResponse.IsOnReview">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.Models.AppGlobalSettingsResponse.MinVersionOnReview">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.Models.AppGlobalSettingsResponse.IcoLkkSold">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.Models.AppGlobalSettingsResponse.IsOnMaintenance">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.Models.AppGlobalSettingsResponse.LowCashOutTimeoutMins">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.Models.AppGlobalSettingsResponse.LowCashOutLimit">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.Models.AppGlobalSettingsResponse.MarginTradingEnabled">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.Models.AppGlobalSettingsResponse.CashOutBlocked">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.Models.AppGlobalSettingsResponse.BtcOperationsDisabled">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.Models.AppGlobalSettingsResponse.BitcoinBlockchainOperationsDisabled">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.Models.AppGlobalSettingsResponse.LimitOrdersEnabled">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.Models.AppGlobalSettingsResponse.MarketOrderPriceDeviation">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.Models.AppGlobalSettingsResponse.BlockedAssetPairs">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.Models.AppGlobalSettingsResponse.OnReviewAssetConditionLayer">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.Models.AppGlobalSettingsResponse.IcoStartDtForWhitelisted">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.Models.AppGlobalSettingsResponse.IcoStartDt">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.Models.AppGlobalSettingsResponse.ShowIcoBanner">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Lykke.Service.LykkeService.Client.AutorestClient.Models.AppGlobalSettingsResponse.Validate">
+            <summary>
+            Validate the object.
+            </summary>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown if validation fails
+            </exception>
+        </member>
+        <member name="M:Lykke.Service.LykkeService.Client.AutorestClient.Models.ErrorResponse.#ctor">
+            <summary>
+            Initializes a new instance of the ErrorResponse class.
+            </summary>
+        </member>
+        <member name="M:Lykke.Service.LykkeService.Client.AutorestClient.Models.ErrorResponse.#ctor(System.String,System.Collections.Generic.IDictionary{System.String,System.Collections.Generic.IList{System.String}})">
+            <summary>
+            Initializes a new instance of the ErrorResponse class.
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.Models.ErrorResponse.ErrorMessage">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.Models.ErrorResponse.ModelErrors">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Lykke.Service.LykkeService.Client.AutorestClient.Models.ExchangeSettingsResponse.#ctor">
+            <summary>
+            Initializes a new instance of the ExchangeSettingsResponse class.
+            </summary>
+        </member>
+        <member name="M:Lykke.Service.LykkeService.Client.AutorestClient.Models.ExchangeSettingsResponse.#ctor(System.String,System.String,System.Nullable{System.Boolean})">
+            <summary>
+            Initializes a new instance of the ExchangeSettingsResponse class.
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.Models.ExchangeSettingsResponse.BaseAssetIos">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.Models.ExchangeSettingsResponse.BaseAssetOther">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.Models.ExchangeSettingsResponse.SignOrder">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Lykke.Service.LykkeService.Client.AutorestClient.Models.IsAliveResponse.#ctor">
+            <summary>
+            Initializes a new instance of the IsAliveResponse class.
+            </summary>
+        </member>
+        <member name="M:Lykke.Service.LykkeService.Client.AutorestClient.Models.IsAliveResponse.#ctor(System.Boolean,System.String,System.String,System.String,System.Collections.Generic.IList{Lykke.Service.LykkeService.Client.AutorestClient.Models.IssueIndicator})">
+            <summary>
+            Initializes a new instance of the IsAliveResponse class.
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.Models.IsAliveResponse.Name">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.Models.IsAliveResponse.Version">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.Models.IsAliveResponse.Env">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.Models.IsAliveResponse.IsDebug">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.Models.IsAliveResponse.IssueIndicators">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Lykke.Service.LykkeService.Client.AutorestClient.Models.IsAliveResponse.Validate">
+            <summary>
+            Validate the object.
+            </summary>
+            <exception cref="T:Microsoft.Rest.ValidationException">
+            Thrown if validation fails
+            </exception>
+        </member>
+        <member name="M:Lykke.Service.LykkeService.Client.AutorestClient.Models.IssueIndicator.#ctor">
+            <summary>
+            Initializes a new instance of the IssueIndicator class.
+            </summary>
+        </member>
+        <member name="M:Lykke.Service.LykkeService.Client.AutorestClient.Models.IssueIndicator.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the IssueIndicator class.
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.Models.IssueIndicator.Type">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Lykke.Service.LykkeService.Client.AutorestClient.Models.IssueIndicator.Value">
+            <summary>
+            </summary>
+        </member>
     </members>
 </doc>

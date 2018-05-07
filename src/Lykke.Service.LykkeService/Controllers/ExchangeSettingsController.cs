@@ -14,7 +14,6 @@ namespace Lykke.Service.Settings.Controllers
     {
         private readonly ISettingsService _settingsService;
 
-        /// <inheritdoc />
         public ExchangeSettingsController(ISettingsService settingsService)
         {
             _settingsService = settingsService;
